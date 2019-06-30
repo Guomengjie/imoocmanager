@@ -18,7 +18,7 @@ export default class Header extends React.Component{
             })
         },1000)
 
-        this.getWeatherAPIData();
+        // this.getWeatherAPIData();
     }
     getWeatherAPIData(){
         let city = '北京';
