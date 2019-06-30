@@ -2,6 +2,7 @@ import React from 'react';
 import {Row,Col} from 'antd'
 import './index.less'
 import Utils from './../../utils/utils.js';
+import axios from '../../axios';
 
 export default class Header extends React.Component{
     state={}
@@ -16,9 +17,16 @@ export default class Header extends React.Component{
                 sysTime
             })
         },1000)
+
+        this.getWeatherAPIData();
     }
     getWeatherAPIData(){
-        
+        let city = '北京';
+        axios.jsonp({
+            url:'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=2hafIbHCvVIDnYsmiGlMtwFGUMtb9G8n'
+        }).then((res)=>{
+            console.log(res);
+        })
     }
     render(){
         return (
