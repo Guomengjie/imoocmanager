@@ -10,7 +10,8 @@ class FormRegister extends React.Component{
     state={}
 
     handleSubmit = ()=>{
-        let userInfo = this.props.form.getFieldsValue();
+        let userInfo = this.props.form.getFieldsValue();//获取所有属性值
+        //this.props.form.resetFieldsValue()  可以重置所有属性值
         console.log(JSON.stringify(userInfo))
         message.success(`${userInfo.userName} 恭喜你，您通过本次表单组件学习，当前密码为：${userInfo.userPwd}`)
     }
@@ -126,7 +127,7 @@ class FormRegister extends React.Component{
                         <FormItem label="爱好" {...formItemLayout}>
                             {
                                 getFieldDecorator('interest', {
-                                    initialValue: ['2','5']
+                                    initialValue: ['2','5','6']
                                 })(
                                     <Select mode="multiple">
                                         <Option value="1">游泳</Option>
@@ -190,7 +191,7 @@ class FormRegister extends React.Component{
                                         action="//jsonplaceholder.typicode.com/posts/"
                                         onChange={this.handleChange}
                                     >
-                                    {this.state.userImg?<img src={this.state.userImg}/>:<Icon type="plus"/>}
+                                    {this.state.userImg?<img alt="" src={this.state.userImg}/>:<Icon type="plus"/>}
                                     </Upload>
                                 )
                             }
@@ -198,7 +199,7 @@ class FormRegister extends React.Component{
                         <FormItem {...offsetLayout}>
                             {
                                 getFieldDecorator('userImg')(
-                                   <Checkbox>我已阅读过<a href="#">慕课协议</a></Checkbox>
+                                   <Checkbox>我已阅读过<a href="#/admin">慕课协议</a></Checkbox>
                                 )
                             }
                         </FormItem>
