@@ -16,9 +16,9 @@ export default class Buttons extends React.Component{
   }
 
   handleChange = (e)=>{
-      this.setState({
-          size:e.target.value
-      })
+    this.setState({
+        size:e.target.value
+    })
   }
 
   render(){

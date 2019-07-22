@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter,Route,Link } from 'react-router-dom'
+import { HashRouter,Route } from 'react-router-dom'
 import App from './App'
 import Login from './pages/login'
 import Button from './pages/ui/button'
@@ -14,6 +14,7 @@ import Carousel from './pages/ui/carousel'
 import FormLogin from './pages/form/login'
 import FormRegister from './pages/form/register'
 import BasicTable from './pages/table/basicTable'
+import HighTable from './pages/table/highTable'
 
 export default class IRouter extends React.Component{
   render(){
@@ -35,6 +36,7 @@ export default class IRouter extends React.Component{
                 <Route path="/admin/form/login" component={FormLogin} />
                 <Route path="/admin/form/reg" component={FormRegister} />
                 <Route path="/admin/table/basic" component={BasicTable} />
+                <Route path="/admin/table/high" component={HighTable} />
               </Admin>
             )
           }}></Route>
