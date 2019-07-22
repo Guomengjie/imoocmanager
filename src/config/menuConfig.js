@@ -83,11 +83,11 @@ const menuList = [
       btnList:[
           {
               title:'订单详情',
-              key:'detail'
+              key:'/admin/order/detail'
           },
           {
               title:'结束订单',
-              key:'finish'
+              key:'/admin/order/finish'
           }
       ]
   },
